@@ -1,0 +1,16 @@
+const int PinButton = 2;
+bool Button;
+void setup ( ) {
+ pinMode (PinButton, INPUT);
+ Serial.begin(9600);
+ }
+void loop ( ) {
+ Button = digitialRead(PinButton);
+ if (Button==HIGH) {
+  delay(20);
+  Serial.println(“Push the button”);
+ }
+ else {
+  Serial.println(“Hello”);
+ }
+}
